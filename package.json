@@ -1,0 +1,26 @@
+{
+	"name": "nextofficeflow-gateway",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "commonjs",
+	"scripts": {
+		"build": "rm -rf build/ && tsc",
+		"start:ts": "tsc -w",
+		"start:js": "nodemon dist/app.js",
+		"start": "concurrently npm:start:*"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@types/node": "^18.19.3",
+		"nodemon": "^3.0.2",
+		"fast-gateway": "^3.4.6",
+		"dotenv": "^16.3.1"
+	},
+	"devDependencies": {
+		"concurrently": "^8.2.1",
+		"typescript": "^5.0.4"
+	}
+}
