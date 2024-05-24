@@ -11,11 +11,11 @@ const server = gateway({
 	routes: [
 		{
 			prefix: "/api/v1/announcement",
-			target: "http://localhost:5001",
+			target: process.env.SERVER_ANNOUNCEMENT_URL ?? "http://localhost:5001",
 		},
 		{
 			prefix: "/api/v1",
-			target: "http://localhost:5002",
+			target: process.env.SERVER_URL ?? "http://localhost:5002",
 		},
 	],
 });
